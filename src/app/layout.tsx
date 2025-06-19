@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Suspense } from "react";
 
 const interSans = Inter({
   weight: ['400', '700'],
@@ -24,7 +25,10 @@ export default function RootLayout({
       <body
         className={`${interSans.variable} antialiased`}
       >
-        {children}
+        <Suspense fallback={<div>Loading...</div>}>
+          {children}
+        </Suspense>
+        
       </body>
     </html>
   );
