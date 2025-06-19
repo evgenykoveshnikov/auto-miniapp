@@ -32,7 +32,7 @@ export default function CarCard({ car }: ICarProps) {
         <h2 className='font-bold text-[16px] px-4'>{car.mark_id} {car.folder_id}</h2>
         <CardContent className='px-4 mt-auto flex gap-4 justify-between'>
           <div>
-              <p className='text-gray-400 text-[14px]'>{car.engine_volume / 1000}л/{car.engine_power}/{car.engine_type}</p>
+              <p className='text-gray-400 text-[14px]'>{car?.engine_volume ? `${car.engine_volume / 1000}л` : 'нет данных'}/{car.engine_power}/{car.engine_type}</p>
               <p className='text-gray-400 text-[14px]'>{car.gearbox}</p>
               <p className='text-gray-400 text-[14px]'>{car.body_type}</p>
               <p className='text-gray-400 text-[14px]'>{car.drive}</p>
