@@ -31,7 +31,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchCars = async () => {
-      const params = {_limit: LIMIT, _page: page};
+      const params: Record<string, string | number> = {_limit: LIMIT, _page: page};
       if (sort) {
         params._sort = 'price';
         params._order = sort;
