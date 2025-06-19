@@ -6,6 +6,7 @@ import { useParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import {Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Thumbs, FreeMode } from 'swiper/modules'
+import {Swiper as SwiperType } from 'swiper'
 
 
 import 'swiper/css';
@@ -18,7 +19,7 @@ export default  function CarInfo() {
     const { id } = useParams();
     const [car, setCar] = useState<Car | null>(null);
     const [loading, setLoading] = useState(true);
-    const [thumbsSwiper, setThumbsSwiper] = useState<Swiper | null>(null);
+    const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
     useEffect(() => {
         const fetchCar = async () => {
