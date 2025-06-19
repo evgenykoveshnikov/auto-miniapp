@@ -27,7 +27,7 @@ export type Car = {
   unique_id: number;
   exchange: string;
   tech_param_id: number;
-  engine_volume: number;
+  engine_volume?: number;
   engine_power: string;
   engine_type: string;
   gearbox: string;

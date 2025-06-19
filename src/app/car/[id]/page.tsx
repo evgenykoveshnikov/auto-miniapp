@@ -77,7 +77,7 @@ export default  function CarInfo() {
                 </div>
                 <div className='flex justify-between gap-4'>
                     <p className='text-gray-400 font-[14px]'>Двигатель</p>
-                    <p>{car?.engine_volume / 1000}л/{car?.engine_power}/{car?.engine_type}</p>
+                    <p>{car?.engine_volume ? `${car.engine_volume / 1000}л` : 'нет данных'}/{car?.engine_power}/{car?.engine_type}</p>
                 </div>
                 <div className='flex justify-between'>
                     <p className='text-gray-400 font-[14px]'>Комплектация</p>
